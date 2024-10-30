@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+            background-color:#f0f8ff;
+        }
+        .container{
+            background-color:#fff;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] { 
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            font-size:1em;
+        }
+        button {
+            padding:10px 20px;
+            font-size:1em;
+            color:#fff;
+            background-color:#2e8b57;
+            border:none;
+            cursor:pointer;
+        }
+        .result {
+            margin-top:20px;
+            font-size:1.2em;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <form action="/calculate" method="POST">
+            <label>Number 1:</label>
+            <input type="text" name="n1" required>
+            <label>Number 2:</label>
+            <input type="text" name="n2" required> 
+            <button type="submit">Add</button>
+        </form>
+        {% if result is not none %}
+            <div class="result">
+                <strong>Result:</strong> {{ result }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

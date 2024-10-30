@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quote For YOU!!!</title>
+    <style>
+        body {
+            font-family:'Georgia', serif;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            height:100vh;
+            margin:0;
+            background:linear-gradient(to bottom right, #7cc9e5,#d9f1fa,#fff7e6,#e1bf75);
+            color:#333;
+        }
+        .container {
+            max-width:600px;
+            background:rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius:10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align:center;
+        }
+        .quote-text {
+            font-size:1.5em;
+            line-height:1.5;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="quote-text">"{{quote}}"</p>
+    </div>
+</body>
+</html>
